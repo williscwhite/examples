@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<style type="text/css">
+		.order {  /* style blue box */
+			color: #FFF;
+			font-size: 80px;
+			text-align: center;
+			height: 100px;
+			width: 100%;  /* just fill up whatever size cell is parent*/
+			background-color:#04F;
+			border-top: 4px solid #99B4FF;
+			border-left: 4px solid #99B4FF;
+			border-right: 4px solid #2E364C;
+			border-bottom: 4px solid #2E364C;
+		}
+
+		.back {  /* style purple box */
+			color: #FFF;
+			font-size: 80px;
+			text-align: center;
+			height: 100px;
+			width: 100%;  /* just fill up whatever size cell is parent*/
+			background-color:#A2A;
+			border-top: 4px solid #99B4FF;
+			border-left: 4px solid #99B4FF;
+			border-right: 4px solid #2E364C;
+			border-bottom: 4px solid #2E364C;
+		}
+
+		#onlyTable{
+			width: 600px;
+		}
+
+		/* could create stating size of td (table cell) elements  */
+
+		</style>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+		$('#toggle1').click(function() {
+
+			$('#box1').toggle("slide");
+			$('#box2').css( "width", "100%" );
+			/*could change size of td element that is remaining */
+
+		});
+
+	});
+</script>
+
+</head>
+<body>
+<table id="onlyTable">
+	<tr>
+		<td id="firstCell">
+			<div class="order" id="box1"> 1 </div>
+		</td>
+		<td>
+			<div class="back" id="box2"> 2</div>
+		</td>
+	</tr>
+</table>
+
+
+
+<a href="#"  id="toggle1">hide box number one</a>
+</body>
+</html>

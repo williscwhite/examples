@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+		<style type="text/css">
+		#box {
+		color: #FFF;
+		font-size: 80px;
+		text-align: center;
+		height: 100px;
+		width: 300px;
+		background-color:#04F; /* the critical component */
+		border-top: 4px solid #99B4FF;
+		border-left: 4px solid #99B4FF;
+		border-right: 4px solid #2E364C;
+		border-bottom: 4px solid #2E364C;
+		}
+		</style>
+
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			$('#boxButton').click(function () {
+			      $('#box').hide("slide", { direction: "left" }, 1000);
+			});
+
+
+
+		  $('#topButton').click(function() {
+		  	//alert("what the");
+		    $('.topRightCell').animate({width: '0px'});
+
+		  });
+		});
+
+
+		</script>
+	</head>
+	<body>
+		<table border=2>
+			<tr>
+				<td class="topRightCel">
+					<div>this is the first cell of the table I have to enter something so that it takes up space ...one </div>
+				</td>
+				<td>
+					<div>this is the second cell of the table and just like the first there needs to be somethingin here two </div>
+				</td>
+			</tr>
+			<tr>
+				<td> three </td>
+				<td> four </td>
+			</tr>
+		</table>
+
+		<div id="box">
+		Box
+		</div>
+
+	<button id="topButton"> slide top</button>
+	<button> slide bottom</button>
+	<button  id="boxButton"> slide box</button>
+	<body>
+</html>

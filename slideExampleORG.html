@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<style type="text/css">
+		.order {
+			color: #FFF;
+			font-size: 80px;
+			text-align: center;
+			height: 100px;
+			width: 300px;
+			background-color:#04F; /* the critical component */
+			border-top: 4px solid #99B4FF;
+			border-left: 4px solid #99B4FF;
+			border-right: 4px solid #2E364C;
+			border-bottom: 4px solid #2E364C;
+		}
+
+		.back {
+			color: #FFF;
+			font-size: 80px;
+			text-align: center;
+			height: 100px;
+			width: 300px;
+			background-color:#A2A; /*Athe critical component */
+			border-top: 4px solid #99B4FF;
+			border-left: 4px solid #99B4FF;
+			border-right: 4px solid #2E364C;
+			border-bottom: 4px solid #2E364C;
+		}
+
+		#onlyTable{
+			width: 600px;
+		}
+		</style>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+
+		$('#toggle1').click(function() {
+
+			$('#box1').toggle("slide");
+
+			$('firstCell').css( "width", "0px" );
+			$('firstCell').css( "padding", "0px" );
+			$('#box2').css( "width", "100%" );
+
+		      /*$('#box1').toggle('slide', function() {
+		            $('#box2').toggle('slide');
+		      });*/
+		});
+		$('#toggle2').click(function() {
+
+				$('#box2').toggle('slide');
+		      /*$('#box2').toggle('slide', function() {
+		            $('#box1').toggle('slide');
+		      });*/
+		});
+
+	});
+</script>
+
+</head>
+<body>
+<table id="onlyTable" border="1">
+	<tr>
+		<td id="firstCell">
+			<div class="order" id="box1"> 1 </div>
+		</td>
+		<td>
+			<div class="back" id="box2"> 2</div>
+		</td>
+	</tr>
+</table>
+
+
+
+<a href="#"  id="toggle1">hide box number one</a>
+<br \>
+ <!-- <a href="#"  id="toggle2"> hide box number 2</a> -->
+</body>
+</html>
