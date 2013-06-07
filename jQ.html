@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul { margin-left:20px; color:blue; }
+li { cursor:default; }
+span { color:red; }
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+<ul>
+<li>Milk</li>
+<li>Bread</li>
+<li class='fade'>Chips</li>
+<li class='fade'>Socks</li>
+</ul>
+<div style="border:5px solid red;  height: 200px; width:200px">
+		</div>
+		<div  id="two" style="border:5px solid blue; background-color:blue; height: 200px; width:200px">
+		</div>
+		<div styl
+
+<script>
+$("li").hover(
+function () {
+console.log("start hover");
+},
+function () {
+console.log("end hover");
+}
+);
+$(two).hover(
+function () {
+console.log("start hover");
+},
+function () {
+console.log("end hover");
+}
+);
+</script>
+</body>
+</html>
